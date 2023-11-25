@@ -4,7 +4,7 @@ import com.driver.model.Spot;
 import com.driver.model.ParkingLot;
 
 public interface ParkingLotService {
-
+    
     void deleteSpot(int spotId);
 
     Spot updateSpot(int parkingLotId, int spotId, int pricePerHour);

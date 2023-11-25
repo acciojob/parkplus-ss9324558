@@ -1,6 +1,9 @@
-package com.driver.model;
+package com.driver.repository;
+import com.driver.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public enum PaymentMode {
+@Repository
+public interface UserRepository extends JpaRepository<User, Integer>{
 
-    CASH, CARD, UPI
 }

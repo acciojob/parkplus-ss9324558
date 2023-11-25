@@ -21,8 +21,8 @@ public class PaymentServiceImpl implements PaymentService {
     public Payment pay(Integer reservationId, int amountSent, String mode) throws Exception {
         Reservation reservation = reservationRepository2.findById(reservationId).get();
         Spot spot= reservation.getSpot();
-        int totalCost= reservation.getNumberOfHours()*spot.getPricePerHour();
-        mode= mode.toUpperCase();
+         int totalCost= reservation.getNumberOfHours()*spot.getPricePerHour();
+         mode= mode.toUpperCase();
         boolean marker = true;
         switch (mode) {
             case "CASH":
@@ -49,8 +49,8 @@ public class PaymentServiceImpl implements PaymentService {
         payment.setPaymentMode(PaymentMode.valueOf(mode));
         payment.setPaymentCompleted(true);
         payment.setReservation(reservation);
-        reservationRepository2.save(reservation);
-        return payment;
+reservationRepository2.save(reservation);
+return payment;
 
 
     }

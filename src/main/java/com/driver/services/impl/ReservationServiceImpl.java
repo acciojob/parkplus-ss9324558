@@ -33,9 +33,9 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public Reservation reserveSpot(Integer userId, Integer parkingLotId, Integer timeInHours, Integer numberOfWheels) throws Exception {
-        User user;
-        Spot spot= null;
-        ParkingLot parkingLot;
+User user;
+Spot spot= null;
+ParkingLot parkingLot;
         String wheeler;
         if (numberOfWheels == 2) {  // <= why?
             wheeler = "TWO_WHEELER";
@@ -64,7 +64,7 @@ public class ReservationServiceImpl implements ReservationService {
         } catch (Exception e) {
             throw new Exception("Cannot make reservation");
         }
-        Reservation reservation = new Reservation();
+Reservation reservation = new Reservation();
         reservation.setNumberOfHours(timeInHours);
         user.getReservationList().add(reservation);
         reservation.setUser(user);
